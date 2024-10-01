@@ -1,0 +1,26 @@
+footer {
+    text-align: center;
+    color: var(--subtilte);
+    padding: 20px  0 ;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    margin-top:-40px
+}
+
+footer ul li a{
+    padding: 0 10px 10px;
+    color: var(--tilte);
+    opacity: 0.5;
+}
+
+footer ul li a:hover{
+    opacity: 1;
+}
+
+footer p{
+    margin-bottom: 10px;
+}

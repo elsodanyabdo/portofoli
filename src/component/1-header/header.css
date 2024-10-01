@@ -1,0 +1,185 @@
+/* ================================== 
+            table of content 
+=====================================
+1-header 
+2-icon button
+3-popup menu
+4-media qauiry
+5-anmation
+    5.1-move  for ----> popup menu 
+    5.2-change for ----> close popup menu
+*/
+/* ================================== 
+            1-header 
+=====================================*/
+
+header.df {
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-top:20px;
+}
+.menu{
+    display: none;
+}
+header.df nav {
+    background-color: var(--bgheader);
+    padding: 15px 35px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    box-shadow: 1px 1px 40px rgb(74 59 59 / 35%);
+}
+
+header ul.df{
+    gap: 16px;
+}
+
+header ul li a{
+    color:var(--tilte);
+    opacity: 0.8;
+    font-size: 15px;
+}
+header ul li a:hover{
+    color:var(--blue);
+    opacity: 1;
+    font-size: 16px;
+}
+
+button{
+    font-size: 20px;
+}
+/* ================================== 
+            2-icon button
+=====================================*/
+.icon-menu , .mode{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 166, 0, 0.544);
+    text-align: center;
+    font-size: 25px;
+    background-color: var(--bgheader);
+    justify-content: center;
+    cursor: pointer;
+    color: var(--subtilte);
+}
+.icon-menu:hover ,.mode:hover{
+    border-color: orange;
+    color:var(--tilte);
+    box-shadow:0px 0px 14px 3px #dcdcdc;
+}
+.mode .icon-sun{
+    color: orange;
+    opacity: .5;
+    transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+}.mode:hover .icon-sun{
+    opacity: 1;
+}
+.fixed ul li.right button.icon-close{
+    font-size: 25px;
+}
+.fixed ul li.right button.icon-close:hover{
+    color: red;
+    animation: change 0.5s ;
+    -webkit-animation: change 0.5s ;
+}
+
+/* ================================== 
+            3-popup
+=====================================*/
+.fixed{
+    position: fixed;
+    inset: 0;
+    background-color: #0a0416cf;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+
+.fixed  ul{
+    padding: 10px  15px;
+    width: 70%;
+    margin: 30px auto 0;
+    background-color: var(--socandry);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    animation: move 0.3s ;
+    -webkit-animation: move 1s  ;
+}
+.fixed ul li{
+    padding: 10px;
+}
+.fixed ul li.right{
+    text-align: end;
+    border-bottom: none !important; 
+}
+.fixed ul li a{
+    font-size: 16px;
+}
+.fixed ul li:not(:last-child){
+    border-bottom: 1px solid var(--border);
+ 
+}
+/* ================================== 
+            4-media quary
+=====================================*/
+@media (max-width:700px ) {
+    header.df nav{
+        display: none;
+    }
+    header.df .menu{
+        display: block;
+    }
+}
+/* ================================== 
+            5-animation
+=====================================*/
+/* ================================== 
+             5.1-move
+=====================================*/
+@keyframes move {
+    0% {
+        scale:  0;
+    }
+    60%{
+        scale: 1.4;
+    }
+    100%{
+        scale: 1;
+    }
+}
+/* ================================== 
+             5.2-change
+=====================================*/
+@keyframes change {
+    0% {
+        transform:  rotate(0);
+        -webkit-transform:  rotate(0);
+        -moz-transform:  rotate(0);
+        -ms-transform:  rotate(0);
+        -o-transform:  rotate(0);
+}
+50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+    100%{
+        transform:  rotate(-360deg);
+        -webkit-transform:  rotate(-360deg);
+        -moz-transform:  rotate(-360deg);
+        -ms-transform:  rotate(-360deg);
+        -o-transform:  rotate(-360deg);
+}
+}
